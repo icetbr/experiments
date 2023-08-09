@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+      "ascii-table3": "^0.8.2",
+      "benny": "^3.7.1"
+  }
+}

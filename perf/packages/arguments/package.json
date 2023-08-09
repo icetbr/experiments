@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "lodash": "^4.17.21",
+    "ramda": "^0.29.0"
+  }
+}

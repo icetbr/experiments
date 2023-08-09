@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@arrows/composition": "^1.2.2",
+    "@mobily/ts-belt": "^4.0.0-rc.5",
+    "iter-ops": "^3.1.1",
+    "lazy-collections": "^0.10.0",
+    "lodash": "^4.17.21",
+    "ppipe": "^2.6.6",
+    "ramda": "^0.29.0",
+    "transducers-js": "^0.4.174"
+  }
+}

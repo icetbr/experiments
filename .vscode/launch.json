@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "default",
+            "type": "node",
+            "continueOnAttach": true,
+            "request": "attach",
+            // must be exposed in docker-compose.yml
+            "port": 9230,
+            // auto reattachs when nodemon restarts node
+            "restart": true,
+            // high number helps to keep debugging always on
+            "timeout": 99999999,
+            "skipFiles": [
+                "<node_internals>/**",
+                // "${workspaceRoot}/node_modules/**/*.js"
+            ]
+        }
+    ]
+}

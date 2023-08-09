@@ -1,0 +1,18 @@
+{
+  "sourceMaps": "both",
+  "retainLines": true,
+    "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ],
+    "plugins": [
+        ["@babel/plugin-proposal-pipeline-operator", { "topicToken": "^", "proposal": "hack" }]
+    ]
+  }
+

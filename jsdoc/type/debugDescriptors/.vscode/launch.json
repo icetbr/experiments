@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}",
+            // "outputCapture": "std",
+
+            "ttacustomDescriptionGenerator": "function (def) { return Object.prototype.toString.call(this) === '[object Date]' ? this.toISOString().substring(0, 16) : def }",
+            "xcustomDescriptionGenerator": "function (def) { return typeof this.getMonth === 'function' ? this.toISOString().substring(0, 16) : def }",
+            "zcustomDescriptionGenerator": "function (def) { return this instanceof Date ? this.toISOString().substring(0, 16) : def }",
+            "aacustomDescriptionGenerator": "function (def) { return this.toISOString().substring(0, 16) }",
+            "xxcustomDescriptionGenerator": "this.toISOString().substring(0, 16)",
+            "ccccustomDescriptionGenerator": "function () { return this; }",
+
+            "nncustomPropertiesGenerator": "function customPropertiesGenerator () {\n    return { ...this, start: this.start.toISOString().substring(0, 16) }\n}",
+            "qcustomPropertiesGenerator": "function customPropertiesGenerator () { return this.toISOString ? this.toISOString().substring(0, 16) : this }",
+            "wcustomPropertiesGenerator": "this.toISOString().substring(0, 16)",
+            "zzzzcustomPropertiesGenerator": "this.start || this.length ? this : 'ddv'",
+
+            "customPropertiesGenerator": "function () { if (this.customPropertiesGenerator) return this.customPropertiesGenerator(); else return this; }",
+            "2customDescriptionGenerator": "'ddv'",
+            "3customDescriptionGenerator": "function (def) { if (this.toString) { const _v = this.toString(); if (_v.indexOf(\"[object Object]\") < 0) return _v; } return def; }",
+        }
+    ]
+}

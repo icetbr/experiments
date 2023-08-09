@@ -1,0 +1,25 @@
+# yaml
+data:
+    post:
+        id: be01e7669cbd
+        responsesCount: 43
+        threadedPostResponses:
+            pagingInfo:
+                next:
+                    to: 1.1520096666424:538368ee7758
+            posts:
+                - id: f6070b0288c7
+                  responsesCount: 0
+                  creator:
+                      name: Kristian Mandrup
+                  clapCount: 11
+                  createdAt: 1521128384454
+                  content:
+                      bodyModel:
+                          paragraphs:
+                              - text: Yes, I had the same “aha moment” lately… When you think about it, this is the same reason why f.ex GraphQL is so much more convenient than REST, or MongoDB over SQL etc. The service (ie. function) has a very loose schema with a common protocol
+                                id: 4acf88645d08_0
+                                name: 00fd
+                                type: P
+                                markups: []
+                  threadedPostResponses:

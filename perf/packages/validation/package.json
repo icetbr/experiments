@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@sinclair/typebox": "^0.30.0",
+    "fastest-validator": "^1.17.0",
+    "superstruct": "^1.0.3",
+    "typia": "^4.1.13"
+  }
+}

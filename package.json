@@ -1,0 +1,26 @@
+{
+    "type": "module",
+    "scripts": {
+        "babelNode": "./node_modules/.bin/babel-node --inspect=9230 functional/pipe/tests/babel.js --config-file .babel.confsig.js --out-dir functional/pipe/dist",
+        "babelNode2": "./node_modules/.bin/babel-node --inspect=9230 functional/pipe/tests/babel.js --config-file .babel.confsig.js --out-dir functional/pipe/dist",
+        "babel": "./node_modules/.bin/babel functional/pipe/tests/babel.js --out-dir functional/pipe/dist",
+        "start": "node functional/pipe/dist/babel.js"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.20.7",
+        "@babel/plugin-proposal-pipeline-operator": "^7.18.9",
+        "@babel/preset-env": "^7.20.2",
+        "@mobily/ts-belt": "^4.0.0-rc.5",
+        "froebel": "^0.23.2",
+        "lodash": "^4.17.21",
+        "mocha": "^10.2.0",
+        "ppipe": "^2.6.6",
+        "ramda": "^0.28.0",
+        "source-map-support": "^0.5.21",
+        "stacktracey": "^2.1.8"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.12",
+        "@babel/node": "^7.20.7"
+    }
+}
