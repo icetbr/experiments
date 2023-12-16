@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "noLib": true,
+        "types": [],
+        "moduleResolution": "nodenext",
+        "checkJs": true
+        // "esModuleInterop": true,
+    },
+
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}

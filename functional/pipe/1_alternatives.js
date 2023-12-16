@@ -36,7 +36,7 @@ const parseSchema = input => { let $ = input;      // const parseSchema = $ => /
 
 // Comma Pipe
 const parseSchema = input => (($ = input) => (     // const parseSchema = $ => ( // flow variation
-    $ = filter(x => x >= 0)($),
+    $ = filter(x => x >= 0)($)
     $ = map(x => x * 2)($),
     $ = toSet($)
 ))()
@@ -62,6 +62,14 @@ toSet(
         ),
        x => x * 2
        )
+)
+
+// nested2
+toSet(
+map(x => x * 2
+filter(input, x => x >= 0
+),
+)
 )
 
 object.keys(toObject(map(parseMdTable(mdTable), toSchema)))

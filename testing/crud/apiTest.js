@@ -1,4 +1,6 @@
 /**
+ * GOAL: reducing duplication
+ *
  * putting these tests here reduce duplication that would require all tests to check for the return value
  *
  * BUT must tie up a real model:

@@ -1,16 +1,20 @@
 import { addSuite } from '../benchmark/benny.js';
 import native from './native/inline.js';
+import custom from './native/custom.js';
 import runtypes from './ts-runtime-checks.js';
 import sinclairTypebox from './sinclair-typebox.js';
 import spectypes from './spectypes.js';
 import typia from './typia.js';
+import fastestValidator from './fastest-validator.js';
 
 const cases = {
     // ...sinclairTypebox,
     // ...native,
     // ...runtypes,
     // ...spectypes,
-    ...typia,
+    // ...typia,
+    // ...fastestValidator,
+    ...custom,
 }
 
 const validateData = Object.freeze({

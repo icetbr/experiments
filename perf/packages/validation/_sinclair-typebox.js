@@ -96,7 +96,7 @@ const dataType = Type.Object(
 
 const compiledType = TypeCompiler.Compile(dataType);
 
-console.log(compiledType.Code())
+// console.log(compiledType.Code())
 
 export default {
   // ['@sinclair/typeboxAot assertStrict']: data => {

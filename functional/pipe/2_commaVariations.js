@@ -9,6 +9,20 @@ const calculate = input => (($ = input) => (
 const calculate = (input, $ = input) => (
 const calculate = input => { let $ = input; return (
 
+// BEST: F# Function
+const parseSchema = _(
+    filter(x => x >= 0)
+    map(x => x * 2)
+    toSet
+)
+
+// CLOSE: Coma
+const parseSchema = o => (
+    o = filter(o, x => x >= 0),
+    o = map(o, x => x * 2),
+    o = toSet(o),
+)
+
 // flow
 const calculate = $ => (
     $ = filter(x => x >= 0)($),

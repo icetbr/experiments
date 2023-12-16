@@ -1,7 +1,13 @@
 {
   "type": "module",
   "dependencies": {
-      "ascii-table3": "^0.8.2",
-      "benny": "^3.7.1"
+    "@best/cli": "^9.0.0",
+    "@best/runner": "^9.0.0",
+    "@best/runner-headless": "^9.0.0",
+    "@probe.gl/bench": "^4.0.4",
+    "ascii-table3": "^0.8.2",
+    "benny": "^3.7.1",
+    "mitata": "^0.1.6",
+    "probe.gl": "^3.6.0"
   }
 }

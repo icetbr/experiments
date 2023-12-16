@@ -2,7 +2,9 @@
   "type": "module",
   "dependencies": {
     "@sinclair/typebox": "^0.30.0",
+    "cli-highlight": "^2.1.11",
     "fastest-validator": "^1.17.0",
+    "prettier": "^3.0.1",
     "superstruct": "^1.0.3",
     "typia": "^4.1.13"
   }

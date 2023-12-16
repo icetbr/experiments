@@ -9,8 +9,8 @@ const red      = msg => `\x1b[31m${msg}\x1b[0m`;
 const normal   = msg => `\x1b[0m${msg}\x1b[0m`;
 
 const options = {
+    // maxTime: 1, // default: 5
     // minTime: 15,
-    maxTime: 1, // default: 5
     // minSamples: 50, // default: 5
     // initCount: 100,
     // minTime: 10

@@ -7,7 +7,7 @@
             "continueOnAttach": true,
             "request": "attach",
             // must be exposed in docker-compose.yml
-            "port": 9230,
+            "port": 9229,
             // auto reattachs when nodemon restarts node
             "restart": true,
             // high number helps to keep debugging always on

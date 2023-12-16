@@ -1,4 +1,71 @@
 {
     "problems.decorations.enabled": false,
-    "javascript.validate.enable": false
+    "javascript.validate.enable"  : false,
+    "typescript.validate.enable": false,
+    "editor.tokenColorCustomizations": {
+        "[Minimalist (Purple Object Keys)]": {
+            "textMateRules": [
+                {
+                    "name": "Template literals",
+                    "scope": "meta.template.expression.js entity.name.function.js",
+                    "settings": {
+                        "foreground": "#089c11",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "name": "xxx",
+                    "scope": "meta.object-literal.key.js string",
+                    "settings": {
+                        "foreground": "#8250DF"
+                    }
+                },
+                {
+                    "name": "Grey JsDocs annotations/punctuation",
+                    "scope": "storage.type.class.jsdoc, entity.name.type.instance.jsdoc, punctuation.definition.bracket.curly.end.jsdoc",
+                    "settings": {
+                        "foreground": "#C0C0C0"
+                    }
+                },
+                {
+                    "name": "Grey ${}",
+                    "scope": "punctuation.definition.template-expression.begin.js, punctuation.definition.template-expression.end.js",
+                    "settings": {
+                        "foreground": "#089c11"
+                    }
+                },
+                {
+                    "name": "export",
+                    "scope": "keyword.control.export.js",
+                    "settings": {
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "name": "json keys",
+                    "scope": "support.type.property-name.json",
+                    "settings": {
+                        "foreground": "#8250DF"
+                    }
+                },
+                {
+                    "name": "function.js",
+                    "scope": "meta.function-call.js entity.name.function.js",
+                    "settings": {
+                        "foreground": "#3B5BB5",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "name": "bash",
+                    "scope": "punctuation.definition.arguments.shell, punctuation.definition.group.shell",
+                    "settings": {
+                        "foreground": "#dfdfdf"
+                    }
+                }
+            ]
+        },
+        "comments": "",
+        "textMateRules": []
+    },
 }

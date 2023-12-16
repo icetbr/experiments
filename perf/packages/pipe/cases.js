@@ -10,16 +10,15 @@ import * as IterOps from 'iter-ops';
 
 const { filter, map, reduce } = Belt.A;
 
-const nativePipe = (fn, ...fns) =>(...args) => fns.reduce((acc, f) => f(acc), fn(...args));
-const nativePipeFirst = (...fns) => (arg) => fns.reduce((arg, fn) => fn(arg), arg);
+const nativePipe = (...fns) => (arg) => fns.reduce((arg, fn) => fn(arg), arg);
 
 // HELPERS
 const isOdd = (x) => x % 2 !== 0;
 const triple = (x) => x * 3;
 const sum = (a, b) => a + b;
 
-
 var xf = t.comp(t.filter(isOdd), t.map(triple));
+
 const cases = {
     imperative: input => {
         let total = 0;
@@ -35,23 +34,44 @@ const cases = {
         .map(triple)
         .reduce(sum, 0),
 
-    nativePipe: nativePipe(
-        filter(isOdd),
-        map(triple),
-        reduce(0, sum),
-    ),
-
-    nativePipeFirst: nativePipeFirst(
-        filter(isOdd),
-        map(triple),
-        reduce(0, sum),
-    ),
+    reduceFn: input => input.reduce((total, x) => {
+        return isOdd(x) ? sum(total, triple(x)) : total;
+    }, 0),
 
     belt: Belt.flow(
         filter(isOdd),
         map(triple),
         reduce(0, sum),
     ),
+
+    nativePipe: nativePipe(
+        filter(isOdd),
+        map(triple),
+        reduce(0, sum),
+    ),
+
+    ramda: R.pipe(
+        filter(isOdd),
+        map(triple),
+        reduce(0, sum),
+    ),
+
+    '@arrows': C.pipe(
+        filter(isOdd),
+        map(triple),
+        reduce(0, sum),
+    ),
+
+    'lodash/fp': _.pipe(
+        filter(isOdd),
+        map(triple),
+        reduce(0, sum),
+    ),
+
+    ppipe: input => Ppipe(input)
+        .pipe(filter(isOdd))
+        .pipe(map(triple))
+        .pipe(reduce(0, sum))(),
 
     iterOps: input => {
         const i = IterOps.pipe(
@@ -73,33 +93,9 @@ const cases = {
     transducersJs: (input) => {
         return t.transduce(xf, sum, 0, input);
     },
-
-    ppipe: input => Ppipe(input)
-      .pipe(filter(isOdd))
-      .pipe(map(triple))
-      .pipe(reduce(0, sum))(),
-
-    //TODO tryCatch variant
-
-    ramda: R.pipe(
-        filter(isOdd),
-        map(triple),
-        reduce(0, sum),
-    ),
-
-    '@arrows': C.pipe(
-        filter(isOdd),
-        map(triple),
-        reduce(0, sum),
-    ),
-
-    'lodash/fp': _.pipe(
-        filter(isOdd),
-        map(triple),
-        reduce(0, sum),
-    ),
 };
 
 const params = [...Array(100).keys()];
 
+// await addSuite('Pipe', cases, { params, expected: 7500 });
 addSuite('Pipe', cases, { params, expected: 7500 });

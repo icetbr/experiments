@@ -1,5 +1,11 @@
 {
     "workspaces": [
         "packages/*"
-    ]
+    ],
+    "type": "module",
+    "dependencies": {
+        "@mobily/ts-belt": "^4.0.0-rc.5",
+        "npm-compare": "^0.2.0",
+        "require-dir": "^1.2.0"
+    }
 }

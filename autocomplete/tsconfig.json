@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "noLib": true,
+        "types": [],
+        "explainFiles": true
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
